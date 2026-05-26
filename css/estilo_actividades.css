@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* NUEVO FONDO */
+    background: linear-gradient(
+        135deg,
+        #1e293b,
+        #334155,
+        #475569
+    );
+
+    color: #f1f5f9;
+
+    line-height: 1.7;
+
+    padding: 40px 20px;
+}
+
+.page-container{
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    background: rgba(15, 23, 42, 0.9);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+}
+
+.page-title{
+
+    font-size: 3rem;
+
+    margin-bottom: 40px;
+
+    text-align: center;
+
+    color: #38bdf8;
+}
+
+h2{
+
+    margin-top: 50px;
+
+    margin-bottom: 20px;
+
+    color: #7dd3fc;
+
+    border-left: 6px solid #38bdf8;
+
+    padding-left: 15px;
+}
+
+.page-text{
+
+    margin-bottom: 20px;
+
+    font-size: 1.05rem;
+
+    text-align: justify;
+
+    color: #e2e8f0;
+}
+
+.page-image{
+
+    width: 85%;
+
+    display: block;
+
+    margin: 25px auto;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+
+    transition: 0.3s;
+}
+
+.page-image:hover{
+
+    transform: scale(1.01);
+}
+
+.back-btn{
+
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #f97316,
+        #ea580c
+    );
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+
+    z-index: 1000;
+}
+
+.back-btn:hover{
+
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #fb923c,
+        #f97316
+    );
+}
+
+@media(max-width: 768px){
+
+    .page-container{
+
+        width: 100%;
+
+        padding: 25px;
+    }
+
+    .page-title{
+        font-size: 2rem;
+    }
+
+    .page-text{
+        font-size: 1rem;
+    }
+
+    .page-image{
+        width: 100%;
+    }
+
+}
