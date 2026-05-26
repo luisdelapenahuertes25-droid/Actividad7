@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luis, Albert y Jesus">
+    <title>Actividad 5</title>
+    <link rel="stylesheet" href="css/estilo_actividades.css">
+</head>
+<body>
+    <div class="page-container">
+
+        <h1 class="page-title">
+            Actividad 5 - Configuración de servicios
+        </h1>
+
+        <p class="page-text">
+            Documentación de la instalación y configuración de los servicios WEB y FTP en Raspberry.
+        </p>
+
+        <!-- ================= WEB ================= -->
+
+        <h2>Servidor WEB</h2>
+
+        <p class="page-text">
+            Para empezar descargaremos net-tools y unzip.
+        </p>
+
+        <img src="fotos/Act5/2.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Abrimos el archivo de configuración YAML para asignar una IP fija necesaria para los servicios.
+        </p>
+
+        <img src="fotos/Act5/3.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            La configuración final queda de la siguiente forma:
+        </p>
+
+        <img src="fotos/Act5/4.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Aplicamos cambios de permisos y activamos la configuración de red.
+        </p>
+
+        <img src="fotos/Act5/5.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Comprobamos el funcionamiento en localhost desde el cliente.
+        </p>
+
+        <img src="fotos/Act5/6.jpg" class="page-image" alt="">
+        <img src="fotos/Act5/7.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Acceso desde cliente:
+            <strong>http://192.168.1.136</strong>
+        </p>
+
+        <!-- ================= FTP ================= -->
+
+        <h2>Servidor FTP</h2>
+
+        <p class="page-text">
+            Instalamos el servicio vsftpd.
+        </p>
+
+        <img src="fotos/Act5/8.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Iniciamos y habilitamos el servicio:
+        </p>
+
+        <p class="page-text">
+            systemctl start vsftpd<br>
+            systemctl enable vsftpd<br>
+            systemctl status vsftpd
+        </p>
+
+        <img src="fotos/Act5/9.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Realizamos copia de seguridad de los archivos de configuración.
+        </p>
+
+        <img src="fotos/Act5/10.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Abrimos la configuración del servidor FTP.
+        </p>
+
+        <img src="fotos/Act5/11.jpg" class="page-image" alt="">
+        <img src="fotos/Act5/12.jpg" class="page-image" alt="">
+        <img src="fotos/Act5/13.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Parámetros configurados:
+        </p>
+
+        <p class="page-text">
+            anonymous_enable=NO<br>
+            local_enable=YES<br>
+            write_enable=YES<br>
+            local_umask=022<br>
+            chroot_local_user=YES<br>
+            allow_writeable_chroot=YES
+        </p>
+
+        <p class="page-text">
+            Reiniciamos el servicio.
+        </p>
+
+        <img src="fotos/Act5/14.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Creamos el usuario FTP.
+        </p>
+
+        <img src="fotos/Act5/15.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Creamos carpeta y asignamos permisos.
+        </p>
+
+        <img src="fotos/Act5/16.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Abrimos puertos necesarios en el servidor.
+        </p>
+
+        <img src="fotos/Act5/17.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Desde el cliente usamos FileZilla con IP, usuario y puerto configurado.
+        </p>
+
+        <img src="fotos/Act5/18.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Transferimos un archivo .txt al servidor FTP.
+        </p>
+
+        <img src="fotos/Act5/19.jpg" class="page-image" alt="">
+
+        <p class="page-text">
+            Verificación del archivo desde el servidor:
+        </p>
+
+        <img src="fotos/Act5/20.jpg" class="page-image" alt="">
+
+        <footer class="footer">
+            Realizado por: Albert, Jesus y Luis
+        </footer>
+    </div>
+<script src="js/main.js"></script>
+</body>
+
+</html>
