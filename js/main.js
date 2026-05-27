@@ -70,6 +70,18 @@ if(btn6){
 
 }
 
+const btn8 = document.getElementById("btn8");
+
+if(btn8){
+
+    btn8.addEventListener("click", () => {
+
+        window.location.href = "Act8.html";
+
+    });
+
+}
+
 function crearBotonVolver(){
 
     const boton = document.createElement("button");
@@ -91,5 +103,39 @@ function crearBotonVolver(){
 if(!document.getElementById("btn1")){
 
     crearBotonVolver();
+
+}
+
+/* =========================
+   BUSCADOR ACTIVIDADES
+========================= */
+
+const searchInput = document.getElementById("searchInput");
+
+if(searchInput){
+
+    searchInput.addEventListener("keyup", function(){
+
+        const filtro = searchInput.value.toLowerCase();
+
+        const botones = document.querySelectorAll(".page-btn");
+
+        botones.forEach((boton) => {
+
+            const texto = boton.innerText.toLowerCase();
+
+            if(texto.includes(filtro)){
+
+                boton.style.display = "block";
+
+            }else{
+
+                boton.style.display = "none";
+
+            }
+
+        });
+
+    });
 
 }
